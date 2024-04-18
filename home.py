@@ -95,7 +95,13 @@ def app():
             temp_data = helper.fetch_bySelection(store_data, sel_cat, sel_rat, sel_type, sel_contentFor, sel_genre, sel_andVer)
             st.dataframe(temp_data, height=850)
 
-            # string = "" if string == "All" else "All"
+            ssel_cat = "" if ssel_cat == "All" else ssel_cat
+            ssel_rat = "" if ssel_rat == "All" else ssel_rat
+            ssel_type = "" if ssel_type == "All" else ssel_type
+            ssel_contentFor = "" if ssel_contentFor == "All" else ssel_contentFor
+            ssel_genre = "" if ssel_genre == "All" else ssel_genre
+            ssel_andVer = "" if ssel_andVer == "All" else ssel_andVer
+
             now = datetime.datetime.now().strftime("%Y-%m-%d__%H:%M:%S")
             add_data = ssel_cat +" "+ ssel_rat +" "+ ssel_type +" "+ ssel_contentFor +" "+ ssel_genre +" "+ ssel_andVer
             
