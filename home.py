@@ -104,6 +104,7 @@ def app():
 
             now = datetime.datetime.now().strftime("%Y-%m-%d__%H:%M:%S")
             add_data = ssel_cat +" "+ ssel_rat +" "+ ssel_type +" "+ ssel_contentFor +" "+ ssel_genre +" "+ ssel_andVer
+            add_data = add_data.strip()
             
             save_data(now, str(sel_cat), str(sel_rat), str(sel_type), str(sel_contentFor), str(sel_genre), str(sel_andVer), str(add_data))
 
